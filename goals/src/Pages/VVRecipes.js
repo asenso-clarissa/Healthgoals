@@ -16,24 +16,24 @@ useEffect (() => {
 
 const getVVRecipes = async () => {
   const response = await fetch(
-    `https://api.edamam.com/search?q=keto&app_id=${APP_ID}&app_key=${APP_KEY}`
+    `search?q=vegan&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
   const data = await response.json();
   setVVRecipes(data.hits);
 };
 
   return (
-    <div className="">
+    <Wrapper className="">
     {vvRecipes.map(recipe =>(
-      <VVRecipe >
-      key={recipe.recipe.label}
+      <div key={recipe.recipe.label}>
+      
       <h3>{recipe.recipe.label}</h3>
       <p>{recipe.recipe.calories} </p>
       img{recipe.recipe.image}
       <p>{recipe.recipe.ingredients}</p>
-      </ VVRecipe>
+      </ div>
     ))};
-    </ div>
+    </ Wrapper>
 
 
 
@@ -41,7 +41,7 @@ const getVVRecipes = async () => {
 
 
 }
-  const VVRecipe = styled.div `
+  const Wrapper = styled.div `
   
   `
 export default VVRecipes;

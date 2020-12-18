@@ -16,7 +16,7 @@ useEffect (() => {
 
 const getSmoothieRecipes = async () => {
   const response = await fetch(
-    `https://api.edamam.com/search?q=smoothie&app_id=${APP_ID}&app_key=${APP_KEY}`
+    `/search?q=smoothie&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
   const data = await response.json();
   setSmoothieRecipes(data.hits);
@@ -25,8 +25,8 @@ const getSmoothieRecipes = async () => {
   return (
     <div className="">
     {smoothieRecipes.map(recipe =>(
-      <SmoothieRecipe >
-      key={recipe.recipe.label}
+      <SmoothieRecipe key={recipe.recipe.label}>
+      
       <h3>{recipe.recipe.label}</h3>
       <p>{recipe.recipe.calories} </p>
       img{recipe.recipe.image}

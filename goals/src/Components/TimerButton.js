@@ -1,8 +1,9 @@
+import styled from 'styled-components/macro';
 
 
 function TimerButton(props) {
     return (
-      <div className="App">
+      <StyledButton className="App">
           {(props.status === 0)?
         <button onClick={props.start}> Start Fast</button> : ""
           }  
@@ -22,9 +23,28 @@ function TimerButton(props) {
             <button onClick={props.reset}> Start eating</button> 
              </div> : ""
               } 
-      </div>
+      </StyledButton>
     );
   }
   
   export default TimerButton;
+
+  const StyledButton = styled.div`
+
+  background: #fff;
+  margin-top: 30px;
+  align-item:center;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 150px;
+  transition: background 3s;
+  
+  button{
+    border: 2px solid #C85454;
+  color: #C85454;
+  padding: 15px 25px;
+  }
+  `
   
