@@ -73,5 +73,6 @@ header{
   text-align: center;
   color: palevioletred; 
   background-color:#E8F8F5;
+  
 }
 `

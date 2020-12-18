@@ -42,7 +42,7 @@ const KetoRecipes = () => {
 
         </p>
 
-        <section>
+        <Section>
     {ketoRecipes && ketoRecipes.map((recipe, index) =>(
       <div key={index}>
         <h3>{recipe.recipe.label}</h3>
@@ -53,14 +53,16 @@ const KetoRecipes = () => {
       </div>
     ))};
     
-    </section>
+    </Section>
     </ div>
 
 
 
   );
 }; 
-const Wrapper = styled.div `
+const Section = styled.div `
+
+
   
   `
 
