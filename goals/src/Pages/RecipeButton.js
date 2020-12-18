@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { BrowserRouter as Router,Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 /*import VVRecipes from '../Pages/VVRecipes';
 import KetoRecipes from '../Pages/KetoRecipes';
 import SmoothieRecipes from '../Pages/SmoothieRecipes';*/
 
 
 
-const RecipeButton = ({ size, text }) => {
+const RecipeButton = () => {
     return (
-        <Router>
+       
         <div>
 
             <CircleButtons>
@@ -30,7 +30,7 @@ const RecipeButton = ({ size, text }) => {
                 </Link>
             </CircleButtons>
         </div>
-        </Router>
+       
     )
 }
 

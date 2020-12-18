@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Link,  } from 'react-router-dom';
 import homeIcon from '../img/home.png';
 import workoutIcon from '../img/workout.png';
 import recipiesIcon from '../img/kochen.png';
@@ -13,12 +13,11 @@ function Navbar() {
   return (
   <>
     <Router>
-      <Switch>
     
       <StyledNavbar>
         <ul>
           
-         <li> <Link to="/home"  >
+         <li> <Link to="/"  >
            
               
                 <img src={homeIcon} alt="homeIcon" style={{width: '50px'}} /> 
@@ -49,9 +48,8 @@ function Navbar() {
          </Link>
         </ul>
       </StyledNavbar>
-   
-    </Switch>
-    </Router>
+      </Router>
+    
     </ >
   );
 }
