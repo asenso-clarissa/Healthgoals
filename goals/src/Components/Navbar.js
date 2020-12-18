@@ -1,49 +1,71 @@
 import React from "react";
-import homeIcon from '../img/home.png'
-import workoutIcon from '../img/workout.png'
-import recipiesIcon from '../img/kochen.png'
-import profileIcon from '../img/profile.png'
-import styled from 'styled-components/macro'
+import { BrowserRouter as Router, Link, Switch } from 'react-router-dom';
+import homeIcon from '../img/home.png';
+import workoutIcon from '../img/workout.png';
+import recipiesIcon from '../img/kochen.png';
+import profileIcon from '../img/profile.png';
+import styled from 'styled-components/macro';
+//import RecipeButton from './RecipeButton'
+//import Home from "../Pages/Home";
 //import { BrowserRouter as Switch, Route } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <div>
+  <>
+    <Router>
+      <Switch>
+    
       <StyledNavbar>
         <ul>
-          <li> 
-              <button>
+          
+         <li> <Link to="/home"  >
+           
+              
                 <img src={homeIcon} alt="homeIcon" style={{width: '50px'}} /> 
-            </button>
+            
+          
+          </Link>
           </li>
 
+          <Link  to="/workout" > 
           <li>
-            <button>
+            
                 <img src={workoutIcon} alt="workoutIcon" style={{width: '50px'}} /> 
-            </button> 
+            
         </li>
-
+        </Link>
+        <Link to="/recipies" >
           <li>
-              <button>
+              
           <img src={recipiesIcon} alt="recipiesIcon" style={{width: '50px'}} /> 
-         </button> 
+         
          </li>
-          <li> <button>
+         </Link>
+
+         <Link to="/profile">
+          <li> 
           <img src={profileIcon} alt="profieleIcon" style={{width: '50px'}} /> 
-         </button> </li>
+         </li>
+         </Link>
         </ul>
       </StyledNavbar>
-    </div>
+   
+    </Switch>
+    </Router>
+    </ >
   );
 }
 
 export default Navbar;
 
 const StyledNavbar = styled.div`
-    display: fixed;
+    display: flex;
     justify-content: center;
     flex-direction: row;
+    position: fixed;
     margin: 0;
+    overflow:hidden;
+
     
     
     
@@ -56,13 +78,10 @@ const StyledNavbar = styled.div`
         justify-content: space between;
         padding: 10px;
     }
-
     button{
         border: none;
         background-color: white;
     }
     
     
-
-
 `

@@ -4,15 +4,18 @@ import styled from 'styled-components/macro'
 export default function Headeline() {
     return (
         <div>
-           <Header>Home</Header>
+           <Header>Recepies</Header>
         </div>
     )
 }
 
 const Header = styled.h1 `
 
-background-color: green;
-align-items: center;
+
+text-align: center;
 margin-top: 0;
+border-bottom: solid;
+background-color: #53B1A6
+padding: #A6F7E4
 
 `
