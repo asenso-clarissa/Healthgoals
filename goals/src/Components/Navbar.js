@@ -16,7 +16,9 @@ function Navbar() {
           <li>
             {' '}
             <Link to="/">
-              <img src={homeIcon} alt="homeIcon" style={{ width: '50px' }} />
+              <img src={homeIcon} 
+              alt="homeIcon" 
+              style={{ width: '50px' }} />
             </Link>
           </li>
           <Link to="/workout">
@@ -58,8 +60,8 @@ const StyledNavbar = styled.div`
   flex-direction: row;
   position: fixed;
   margin-top: 35em;
-  color: palevioletred; 
-  background-color:#E8F8F5;
+  
+  
   
   ul {
     display: flex;
@@ -69,8 +71,11 @@ const StyledNavbar = styled.div`
   li {
     justify-content: space between;
     padding: 18px;
+    background-color:#E8F8F5;
+    
   }
   button {
+    border-top: solid; palevioletred; 
     border: none;
     background-color: white;
   }

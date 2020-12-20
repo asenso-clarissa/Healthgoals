@@ -3,8 +3,8 @@ import styled from 'styled-components/macro'
 import { BrowserRouter as Router, Route, Switch,Link } from 'react-router-dom';
 import VegetarianRecipes from './VegetarianRecipes';
 import VeganRecipes from './VeganRecipes';
-import KetoRecipes from '../Pages/KetoRecipes';
-import SmoothieRecipes from '../Pages/SmoothieRecipes';
+import KetoRecipes from './KetoRecipes';
+import SmoothieRecipes from './SmoothieRecipes';
 
 
 
@@ -12,27 +12,27 @@ const RecipeButton = () => {
     return (
        <Router>
         <div>
-
+        <Header> Recipes </Header>
 
             <CircleButtons>
 
                 <Link to="/KetoRecipes"  > 
-            <Button> Keto
+            <Button> <p>Keto </p>
                 </Button> 
                 </Link>
 
                 <Link to="/VegetarianRecipes" > 
-            <Button> Vegetarian
+            <Button>  <p>Vegetarian</p>
                 </Button> 
                 </Link>
 
                 <Link to="/VeganRecipes"> 
-            <Button> Vegan
+            <Button>  <p>Vegan</p>
                 </Button> 
                 </Link>
 
                 <Link to="/SmoothieRecipes"> 
-            <Button> Smoothies
+            <Button> <p>Smoothies</p> 
                 </Button> 
                 </Link>
             </CircleButtons>
@@ -40,7 +40,7 @@ const RecipeButton = () => {
         </div>
         <Switch>
             <Route path="/KetoRecipes"> <KetoRecipes /> </Route>
-            <Route path="/VegatarianRecipes"> <VegetarianRecipes /> </Route>
+            <Route path="/VegetarianRecipes"> <VegetarianRecipes /> </Route>
             <Route path="/VeganRecipes"> <VeganRecipes /> </Route>
             <Route path="/SmoothieRecipes"> <SmoothieRecipes /> </Route>
         </Switch>
@@ -59,23 +59,33 @@ const CircleButtons = styled.div `
     flex-direction: row;
     justofy-content: space-between;
     margin-top: 40px;
-
     width: 100px;
-
 
 `
 const Button = styled.div`
   background-color: #00ABA9;
-  border-style: none;
+ align-items: center;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   color: white;
-  margin-left: 100px;
   text-align: center;
   font-size: 1em;
   margin-top: 10px;
+  margin-left: 0.7em;
   
+
 `;
+
+const Header = styled.header`
+
+    border-bottom: solid;
+    font-size: 3em;
+  text-align: center;
+  color: palevioletred; 
+  background-color:#E8F8F5;
+  
+
+`
 
 export default RecipeButton;

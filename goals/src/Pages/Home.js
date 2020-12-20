@@ -1,7 +1,9 @@
 import React, { useState} from "react";
+//import Headeline from "../Components/Header";
 import TimerButton from "../Components/TimerButton";
 import TimerDisplay from "../Components/TimerDisplay";
 import styled from 'styled-components/macro';
+
 
 function Home() {
 const [time, setTime ] = useState({ms:0, s:0, m:0, h:0});
@@ -46,11 +48,11 @@ const reset = () => {
 const resume = () => start();
 
   return (
-    <Wrapper>
+    
       <div>
         <div> 
 
-        <header> Home </header>
+        <Header>Home</Header>
       
       <TimerDisplay time={time} />
       <TimerButton status={status} resume={resume} reset={reset} stop={stop} start={start} />
@@ -58,21 +60,18 @@ const resume = () => start();
         </div>
 
       </div>
-        
-    </Wrapper>
   );
 }
 
 export default Home;
 
-const Wrapper = styled.div`
+const Header = styled.header`
 
-header{
     border-bottom: solid;
     font-size: 3em;
   text-align: center;
   color: palevioletred; 
   background-color:#E8F8F5;
   
-}
+
 `

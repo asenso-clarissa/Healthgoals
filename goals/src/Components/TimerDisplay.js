@@ -29,7 +29,7 @@ function TimerDisplay(props) {
     padding: 10px;
     border-radius: 10px;
     width: 60px;
-    margin-top: 10em;
+    margin-top: 6em;
   }
 
   `

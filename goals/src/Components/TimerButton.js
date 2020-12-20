@@ -32,19 +32,20 @@ function TimerButton(props) {
   const StyledButton = styled.div`
 
   background: #fff;
-  margin-top: 30px;
+
   align-item:center;
   border: none;
   padding: 12px 20px;
-  font-size: 16px;
+  font-size: 20px;
   text-transform: uppercase;
   width: 150px;
   transition: background 3s;
   
   button{
     border: 2px solid #C85454;
-  color: #C85454;
+    background-color:#E8F8F5;
   padding: 15px 25px;
+  font-size: 20px
   }
   `
   

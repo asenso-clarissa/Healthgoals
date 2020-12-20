@@ -51,7 +51,7 @@ const KetoRecipes = () => {
         <button onClick={() => setShowMore(!showMore)}>Show more</button>
         {showMore && <p>{recipe.recipe.ingredients}</p>}
       </div>
-    ))};
+    ))}
     
     </Section>
     <Navbar/>
