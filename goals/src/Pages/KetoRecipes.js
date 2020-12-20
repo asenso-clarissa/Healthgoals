@@ -1,5 +1,6 @@
 import  { useState, useEffect } from 'react';
 import styled from 'styled-components/macro'
+import Navbar from '../Components/Navbar';
 
 const KetoRecipes = () => {
 
@@ -46,7 +47,6 @@ const KetoRecipes = () => {
     {ketoRecipes && ketoRecipes.map((recipe, index) =>(
       <div key={index}>
         <h3>{recipe.recipe.label}</h3>
-        <p>{recipe.recipe.calories} </p>
         <img src={recipe.recipe.image} alt=""/>
         <button onClick={() => setShowMore(!showMore)}>Show more</button>
         {showMore && <p>{recipe.recipe.ingredients}</p>}
@@ -54,6 +54,7 @@ const KetoRecipes = () => {
     ))};
     
     </Section>
+    <Navbar/>
     </ div>
 
 
@@ -61,8 +62,20 @@ const KetoRecipes = () => {
   );
 }; 
 const Section = styled.div `
+margin-left: 1.5em;
 
+h1{
+  text-align:center;
 
+}
+
+p{
+  margin-left: 1.5em;
+}
+img{
+  width:15em;
+  border radius: 50%
+}
   
   `
 

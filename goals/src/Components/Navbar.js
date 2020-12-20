@@ -53,19 +53,22 @@ function Navbar() {
 }
 export default Navbar;
 const StyledNavbar = styled.div`
-  display: flex;
+  
   justify-content: center;
   flex-direction: row;
   position: fixed;
-  margin-top: 40em;
-  overflow: hidden;
+  margin-top: 35em;
+  color: palevioletred; 
+  background-color:#E8F8F5;
+  
   ul {
     display: flex;
+    position: fixed;
     list-style: none;
   }
   li {
     justify-content: space between;
-    padding: 10px;
+    padding: 18px;
   }
   button {
     border: none;

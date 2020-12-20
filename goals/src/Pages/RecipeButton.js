@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import { BrowserRouter as Router, Route, Switch,Link } from 'react-router-dom';
-import VVRecipes from '../Pages/VVRecipes';
+import VegetarianRecipes from './VegetarianRecipes';
+import VeganRecipes from './VeganRecipes';
 import KetoRecipes from '../Pages/KetoRecipes';
 import SmoothieRecipes from '../Pages/SmoothieRecipes';
 
@@ -20,8 +21,13 @@ const RecipeButton = () => {
                 </Button> 
                 </Link>
 
-                <Link to="/VVRecipes" > 
-            <Button> Vegan <br/>Vegetarian
+                <Link to="/VegetarianRecipes" > 
+            <Button> Vegetarian
+                </Button> 
+                </Link>
+
+                <Link to="/VeganRecipes"> 
+            <Button> Vegan
                 </Button> 
                 </Link>
 
@@ -34,7 +40,8 @@ const RecipeButton = () => {
         </div>
         <Switch>
             <Route path="/KetoRecipes"> <KetoRecipes /> </Route>
-            <Route path="/VVRecipes"> <VVRecipes /> </Route>
+            <Route path="/VegatarianRecipes"> <VegetarianRecipes /> </Route>
+            <Route path="/VeganRecipes"> <VeganRecipes /> </Route>
             <Route path="/SmoothieRecipes"> <SmoothieRecipes /> </Route>
         </Switch>
         </Router>
@@ -50,9 +57,10 @@ const CircleButtons = styled.div `
     display: flex;
     
     flex-direction: row;
+    justofy-content: space-between;
     margin-top: 40px;
 
-    width: 150px;
+    width: 100px;
 
 
 `
