@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Workout() {
+function ShowMore() {
     return (
         <div>
             
         </div>
     )
 }
+
+export default ShowMore;

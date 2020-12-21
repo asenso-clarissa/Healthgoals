@@ -62,6 +62,12 @@ img{
   width:15em;
   border radius: 50%
 }
+button{
+  border: 2px solid #C85454;
+  background-color:#E8F8F5;
+padding: 15px 25px;
+font-size: 20px
+}
   
   `
 

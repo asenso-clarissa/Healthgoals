@@ -55,10 +55,9 @@ const RecipeButton = () => {
 const CircleButtons = styled.div `
 
     display: flex;
-    
     flex-direction: row;
     justofy-content: space-between;
-    margin-top: 40px;
+    margin-top: 35px;
     width: 100px;
 
 `
@@ -66,14 +65,13 @@ const Button = styled.div`
   background-color: #00ABA9;
  align-items: center;
   border-radius: 50%;
-  width: 80px;
+  width: 85px;
   height: 78px;
   color: white;
   text-align: center;
-  font-size: 1em;
-  margin-top: 10px;
-  margin-left: 0.7em;
-  padding-top: 20px;
+  font-size: 1.1em;
+  margin-left: 0.4em;
+  padding-top: 10px;
   
 
 `;

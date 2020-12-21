@@ -1,8 +1,13 @@
 import  { useState, useEffect } from 'react';
 import styled from 'styled-components/macro'
-import Navbar from '../Components/Navbar';
+
+
+
+
+
 
 const KetoRecipes = () => {
+
 
   useEffect(() => getKetoRecipesFromApi(), []);
 
@@ -11,7 +16,7 @@ const KetoRecipes = () => {
     
   // KETO
   const [ketoRecipes, setKetoRecipes] = useState([]);
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState('');
   
   const getKetoRecipesFromApi = async () => {
    
@@ -24,6 +29,7 @@ const KetoRecipes = () => {
   
   return (
     <div className="">
+      <Text>
       <h1>What is Keto?</h1>
       <p>
         A keto or ketogenic diet is a low-carb, moderate protein, 
@@ -42,42 +48,57 @@ const KetoRecipes = () => {
         fat without hunger and for improving type 2 diabetes.
 
         </p>
+        </Text>
 
         <Section>
     {ketoRecipes && ketoRecipes.map((recipe, index) =>(
       <div key={index}>
         <h3>{recipe.recipe.label}</h3>
         <img src={recipe.recipe.image} alt=""/>
-        <button onClick={() => setShowMore(!showMore)}>Show more</button>
-        {showMore && <p>{recipe.recipe.ingredients}</p>}
+        <button 
+        type="button"
+        key={recipe.recipe.ingredients}
+        onClick={() => setShowMore(showMore)}>
+          Show more
+        </button>
       </div>
     ))}
     
     </Section>
-    <Navbar/>
     </ div>
 
 
 
   );
 }; 
+export default KetoRecipes;
+
 const Section = styled.div `
 margin-left: 1.5em;
 margin-bottom: 7em;
 
-h1{
-  text-align:center;
-
-}
-
-p{
-  margin-left: 1.5em;
-}
 img{
   width:15em;
-  border radius: 50%
 }
-  
+button{
+  border: 2px solid #C85454;
+  background-color:#E8F8F5;
+padding: 15px 25px;
+font-size: 20px
+}
   `
+const Text = styled.div `
+padding: 0;
+margin: 25px;
+margin-top: 50px;
+p{
+  color: black
+  font-size: 25px;
+  text-align: justify;
+  font-family: 'Bitter', serif;
+  
+}
 
-export default KetoRecipes;
+`
+
+

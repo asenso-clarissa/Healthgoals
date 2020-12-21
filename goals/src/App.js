@@ -5,11 +5,16 @@
 //import SmoothieRecipes from './Pages/KetoRecipes';
 //import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import StyledNavbar from './Components/Navbar';
+import GlobalStyle from './Components/GlobalStyle';
 //import RecipeButton from './Pages/RecipeButton';
 //import KetoRecipes from './Pages/KetoRecipes';
 const App = () => {
   return (
+    <>
    <StyledNavbar />
+   <GlobalStyle />
+
+   </>
   );
 };
 export default App;

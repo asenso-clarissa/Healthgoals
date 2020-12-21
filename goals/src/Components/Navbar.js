@@ -20,7 +20,7 @@ function Navbar() {
         <ul>
           <li>
             {' '}
-            <Link to="/">
+            <Link to="/" >
               <img src={homeIcon} 
               alt="homeIcon" 
               style={{ width: '50px' }} />
@@ -31,7 +31,7 @@ function Navbar() {
               <img
                 src={workoutIcon}
                 alt="workoutIcon"
-                style={{ width: '50px' }}
+                style={{ width: '50px'}}
               />
             </li>
           </Link>
@@ -68,30 +68,33 @@ function Navbar() {
 export default Navbar;
 const StyledNavbar = styled.nav`
   
-  justify-content: center;
+  justify-content:center;
   flex-direction: row;
   position: fixed;
   margin-top: 35em;
-  
-  
-  
-  
+  justify-content:space between;
+
+ 
+
   ul {
-    display: flex;
-    position: fixed;
+    display:flex;
+    position:fixed;
     list-style: none;
-    padding-right: 5em;
+    margin-right:0px;
+    padding:0 40px 0 40px
+  
+   
     
     }
   li {
-    justify-content: space between;
-    padding: 18px;
+    padding:18px;
     background-color:#E8F8F5;
    
   }
-  button {
-    border-top: solid; palevioletred; 
-    
-    background-color: white;
-  }
-`;
+ 
+`; 
+
+/*img:active {
+    border: 2px solid palevioletred; 
+   
+  }*/
