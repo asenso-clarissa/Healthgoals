@@ -1,29 +1,15 @@
 //import KetoStyled from './Components/Keto';
 //import Header from './Components/Header';
 //import VVRecipes from './Pages/KetoRecipes';
-import Home from './Pages/Home';
-import SmoothieRecipes from './Pages/KetoRecipes';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+//import Home from './Pages/Home';
+//import SmoothieRecipes from './Pages/KetoRecipes';
+//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import StyledNavbar from './Components/Navbar';
-import RecipeButton from './Pages/RecipeButton';
+//import RecipeButton from './Pages/RecipeButton';
 //import KetoRecipes from './Pages/KetoRecipes';
 const App = () => {
   return (
-    <Router>
-      <StyledNavbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/recipies">
-          <RecipeButton />
-        </Route>
-
-        <Route path="/SmoothieRecipies">
-          <SmoothieRecipes />
-        </Route>
-      </Switch>
-    </Router>
+   <StyledNavbar />
   );
 };
 export default App;

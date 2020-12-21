@@ -67,12 +67,13 @@ const Button = styled.div`
  align-items: center;
   border-radius: 50%;
   width: 80px;
-  height: 80px;
+  height: 78px;
   color: white;
   text-align: center;
   font-size: 1em;
   margin-top: 10px;
   margin-left: 0.7em;
+  padding-top: 20px;
   
 
 `;

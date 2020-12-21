@@ -1,15 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch,Link } from 'react-router-dom';
 import homeIcon from '../img/home.png';
 import workoutIcon from '../img/workout.png';
 import recipiesIcon from '../img/kochen.png';
 import profileIcon from '../img/profile.png';
 import styled from 'styled-components/macro';
+import Home from '../Pages/Home';
+import Workout from '../Pages/Workout';
+import RecipeButton from '../Pages/RecipeButton';
+import Profile from '../Pages/Profile';
 //import RecipeButton from './RecipeButton'
 //import Home from "../Pages/Home";
 //import { BrowserRouter as Switch, Route } from 'react-router-dom';
 function Navbar() {
   return (
+    <Router>
     <>
       <StyledNavbar>
         <ul>
@@ -30,7 +35,7 @@ function Navbar() {
               />
             </li>
           </Link>
-          <Link to="/recipies">
+          <Link to="/recipes">
             <li>
               <img
                 src={recipiesIcon}
@@ -51,10 +56,17 @@ function Navbar() {
         </ul>
       </StyledNavbar>
     </>
+    <Switch>
+      <Route exact path="/"> <Home /> </Route>
+      <Route path="/workout"> <Workout /> </Route>
+      <Route path="/recipes"> <RecipeButton /> </Route>
+      <Route path="/profile"> <Profile /> </Route>
+    </Switch>
+    </Router>
   );
 }
 export default Navbar;
-const StyledNavbar = styled.div`
+const StyledNavbar = styled.nav`
   
   justify-content: center;
   flex-direction: row;
@@ -63,20 +75,23 @@ const StyledNavbar = styled.div`
   
   
   
+  
   ul {
     display: flex;
     position: fixed;
     list-style: none;
-  }
+    padding-right: 5em;
+    
+    }
   li {
     justify-content: space between;
     padding: 18px;
     background-color:#E8F8F5;
-    
+   
   }
   button {
     border-top: solid; palevioletred; 
-    border: none;
+    
     background-color: white;
   }
 `;

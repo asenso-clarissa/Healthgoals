@@ -63,6 +63,7 @@ const KetoRecipes = () => {
 }; 
 const Section = styled.div `
 margin-left: 1.5em;
+margin-bottom: 7em;
 
 h1{
   text-align:center;
