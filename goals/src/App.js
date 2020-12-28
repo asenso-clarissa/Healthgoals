@@ -11,8 +11,9 @@ import GlobalStyle from './Components/GlobalStyle';
 const App = () => {
   return (
     <>
-   <StyledNavbar />
    <GlobalStyle />
+   
+   <StyledNavbar />
 
    </>
   );

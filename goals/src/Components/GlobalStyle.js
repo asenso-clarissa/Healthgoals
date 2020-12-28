@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components/macro';
+import { createGlobalStyle } from 'styled-components/macro';
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -8,6 +8,6 @@ const GlobalStyle = createGlobalStyle`
 body {
     font-family: 'Bitter', serif;  
 }
-`
+`;
 
 export default GlobalStyle;
